@@ -1,0 +1,2 @@
+# kuma-coin
+ololo kokoko

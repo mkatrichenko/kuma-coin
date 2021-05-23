@@ -3,15 +3,6 @@ const { resolve } = require("path");
 module.exports = {
     filenameHashing: false,
   productionSourceMap: false,
-//   css: {
-//     loaderOptions: {
-//       sass: {
-//         additionalData: `
-//         @import "./src/assets/scss/fonts.scss";
-//         `
-//       }
-//     }
-//   },
     configureWebpack: {
         resolve: {
           alias: {
@@ -19,4 +10,7 @@ module.exports = {
           }
         }
       },
+      publicPath: process.env.NODE_ENV === 'production'
+    ? '/kuma-coin/'
+    : '/'
   }

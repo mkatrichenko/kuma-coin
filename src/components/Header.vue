@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header :class="['header', { scrolled: scrollPosition > 400 }]">
     <div class="container header__container">
       <div class="logo__container">
         <img src="@/assets/img/logo.png" alt="" class="logo" />
@@ -10,14 +10,19 @@
             <a :href="item.link" class="nav_link">{{ item.label }}</a>
           </li>
         </ul>
-        <BaseButton link="#ololo" label="Buy Kuma Inu" size="sm"/>
+        <BaseButton
+          class="buy_btn"
+          link="#ololo"
+          label="Buy Kuma Inu"
+          size="sm"
+        />
       </div>
     </div>
   </header>
 </template>
 
 <script>
-import BaseButton from '@/components/Button.vue'
+import BaseButton from "@/components/Button.vue";
 
 const NAV_LIST = [
   {
@@ -40,18 +45,39 @@ const NAV_LIST = [
 export default {
   name: "Header",
   components: {
-      BaseButton
+    BaseButton,
   },
   data() {
     return {
       NAV_LIST: NAV_LIST,
+      scrollPosition: 0,
     };
+  },
+  mounted() {
+    window.addEventListener("scroll", this.updateScroll);
+  },
+  methods: {
+    updateScroll() {
+      this.scrollPosition = window.scrollY;
+    },
   },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 0.3s background-color ease-out;
+  z-index: 10;
+
+  &.scrolled {
+    background-color: var(--brand);
+  }
+}
 .header__container {
   display: flex;
   justify-content: space-between;
@@ -91,13 +117,6 @@ export default {
 }
 
 .buy_btn {
-  padding: 8px 16px;
-  background-color: #fff;
-  color: var(--brand);
-  font-family: "Lato";
-  font-weight: 500;
-  font-size: 14px;
-  border-radius: 16px;
   margin-left: 20px;
 }
 </style>

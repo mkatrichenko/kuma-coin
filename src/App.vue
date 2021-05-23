@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <Header/>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Head/>
+    <Advantages/>
+    <Buy/>
 		<Products/>
 		<Roadmap/>
 		<Direction/>
@@ -11,23 +12,26 @@
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue'
 import Header from '@/components/Header.vue'
 import Products from '@/components/Products.vue'
 import Roadmap from '@/components/Roadmap.vue'
 import Direction from '@/components/Direction.vue'
 import Footer from '@/components/Footer.vue'
-
+import Head from './components/Head.vue'
+import Advantages from './components/Advantages.vue'
+import Buy from './components/Buy.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
     Header,
 		Products,
 		Roadmap,
 		Footer, 
-		Direction
+		Direction,
+    Head,
+    Advantages,
+    Buy
   }
 }
 </script>
@@ -39,6 +43,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-color: #dadada;
+  position: relative;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100vw;
 }
 </style>

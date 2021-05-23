@@ -1,0 +1,115 @@
+<template>
+  <div class="advantages">
+      <div class="coin coin_1">
+          <img src="@/assets/img/advantages/coin_3.png" alt="">
+      </div>
+      <div class="coin coin_2">
+          <img src="@/assets/img/advantages/coin_4.png" alt="">
+      </div>
+      <div class="paws">
+          <img src="@/assets/img/advantages/paws.png" alt="">
+      </div>
+    <div class="container">
+      <div  class="advantages__card">
+        <div class="card__icon">
+          <img src="@/assets/img/advantages/simple.png" alt="" />
+        </div>
+        <h4 class="card__title">Simple as that!</h4>
+        <p class="card__text" >Token Name - Kuma Inu<br/>Token Symbol - $KUMA <br/>Total Supply - 1 Quadrillion<br/>Liquidity - Locked</p>
+      </div>
+           <div  class="advantages__card">
+        <div class="card__icon">
+          <img src="@/assets/img/advantages/tokenomics.png" alt="" />
+        </div>
+        <h4 class="card__title">No advanced tokenomics</h4>
+        <p class="card__text" >We believe this token should be as simple as possible. No advanced functions of smart contracts are used.</p>
+      </div>
+           <div  class="advantages__card">
+        <div class="card__icon">
+          <img src="@/assets/img/advantages/simple.png" alt="" />
+        </div>
+        <h4 class="card__title">Community Driven</h4>
+        <p class="card__text" >This token is fully decentralized and is community-driven. Thins are on rails because of our beloved Kuma Ina Family.</p>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Advantages"
+};
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="scss">
+.advantages {
+  padding-top: 140px;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.container {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  margin: 0 -23px;
+  max-width: 971px;
+}
+
+.advantages__card {
+  border: 3px solid var(--brand);
+  box-sizing: border-box;
+  border-radius: 16px;
+  position: relative;
+  margin: 0 23px;
+  padding-top: 75px;
+  width: calc(33% - 23px);
+
+  .card__icon {
+    position: absolute;
+    width: 144px;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.coin {
+    position: absolute;
+
+    img {
+        width: 100%;
+    }
+
+    &.coin_1 {
+        right: 0;
+        top: 50px;
+        width: 50px;
+    }
+
+    &.coin_2 {
+        left: 0;
+        bottom: 0;
+        width: 90px;
+    }
+}
+
+.paws {
+    position: absolute;
+    bottom: -180px;
+    right: 11%;
+    width: 180px;
+
+    img {
+        width: 100%;
+    }
+}
+</style>

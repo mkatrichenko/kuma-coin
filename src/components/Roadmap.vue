@@ -6,6 +6,15 @@
 		<div class="roadmap__inner">
         <p>Our roadmap represents our most obvious goals</p>
       </div>
+		<div class="paw">
+			<img src="..//assets/img/paw.png" alt="">
+		</div>
+		<div class="vector__first">
+			<img src="..//assets/img/vector-road1.png" alt="">
+		</div>
+		<div class="vector__second">
+			<img src="..//assets/img/vector-road2.png" alt="">
+		</div>
     <div class="list">
       <div class="roadmap__list first">
 				<img src="..//assets/img/road1.png" alt="">
@@ -82,6 +91,16 @@
 	font-size: 20px;
 	line-height: 28px;
 }
+.paw {
+	margin-bottom: -900px;
+}
+.vector__first {
+	margin-bottom: -400px;
+}
+.vector__second {
+	margin-top: -200px;
+}
+
 .list {
   display: flex;
   margin-top: 70px;

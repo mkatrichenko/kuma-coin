@@ -65,6 +65,21 @@ export default {
     }
   }
 
+  &.accent {
+      background-color: #FFE3BD;
+    color: var(--brand);
+
+    &:hover {
+      background-color: #ffac40;
+      color: #fff;
+    }
+
+    &:active {
+      background-color: #eb8e22;
+      color: #fff;
+    }
+  }
+
   &.sm {
     font-weight: 500;
     font-size: 14px;

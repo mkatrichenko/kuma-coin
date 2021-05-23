@@ -56,13 +56,32 @@
           </div>
         </div>
       </div>
+
+      <div class="buy__block">
+          <div class="arrow__icon">
+            <img src="@/assets/img/arrow.png" alt="" />
+          </div>
+        <div class="block__title">Currently you can buy $KUMA here:</div>
+        <BaseButton class="buy_btn" link="#ololo" label="Buy Kuma Inu" type="secondary"/>
+        <div class="block__subtitle">Price chart is here:</div>
+        <BaseButton
+          class="buy_btn"
+          link="#ololo"
+          label="WATCH PRICE ON DEXTOOLS"
+          type="accent"
+        />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import BaseButton from "@/components/Button.vue";
 export default {
   name: "Buy",
+  components: {
+    BaseButton,
+  },
   data() {
     return {
       showTooltip: false,
@@ -89,6 +108,7 @@ export default {
 <style scoped lang="scss">
 .buy {
   padding-top: 80px;
+  padding-bottom: 100px;
 }
 
 .container {
@@ -202,6 +222,40 @@ export default {
     .link {
       text-decoration: underline;
     }
+  }
+}
+
+.buy__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Patrick";
+  font-style: normal;
+  font-weight: normal;
+  position: relative;
+
+  .block__title {
+    margin-bottom: 32px;
+    margin-top: 95px;
+    font-size: 27px;
+    line-height: 28px;
+  }
+
+  .block__subtitle {
+    margin: 41px 0 32px;
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .arrow__icon {
+      position: absolute;
+      width: 120px;
+      top: 104px;
+      right: -88px;
+
+      img {
+          width: 100%;
+      }
   }
 }
 </style>

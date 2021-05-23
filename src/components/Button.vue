@@ -31,6 +31,8 @@ export default {
 .btn {
   font-family: "Lato";
   transition: 0.3s all ease-out;
+	display: block;
+	
 
   &.primary {
     background-color: #fff;

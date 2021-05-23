@@ -1,27 +1,62 @@
 <template>
-  <div class="card">
-    <div class="card__headdr">
-			<h1>{{title}}</h1>
+  <div class="products products_container">
+		<h2>Our new products:</h2>
+		<div class="cards__container">
+			<ProductCard v-for="(item, index) in CARD_LIST" :key="index"
+			:title="item.title"
+			:text="item.text"
+			:btn="item.btn"/>
 		</div>
-		<div class="card__text">
-			<p>{{text}}</p>
-		</div>
-		<div class="card__btn">
-			<a href="#">{{btnLabel}}</a>
-			</div>
   </div>
 
 </template>
 
 
 <script>
+
+import ProductCard from "@/components/ProductCard"
+const CARD_LIST = [
+	{
+		title: "Kuma Breeder",
+		text: "Yield Farming Protocol for meme coins. Deposit your meme coins, earn passive income.",
+		btn: {
+			label: "Go to the App",
+		link: "#kokoko",
+		}
+		
+	}, 
+	{
+		title: "Kuma Dex",
+		text: "Decentralized, vAMM based perpetual contract trading protocol for meme coins.Up to 25x long/short leverage trading.",
+		btn: {
+			label: "Comming Soon",
+		link: "#kokoko",
+		}
+		
+	},
+];
 export default {
   name: "Products",
-	title: "String",
-  props: {
-    title: String,
-		text: String,
-		btnLabel: String,
+	components: {
+		ProductCard
+	},
+	data() {
+    return {
+      CARD_LIST: CARD_LIST,
+    };
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.cards__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.products_container {
+	max-width: 1376px;
+	margin: 0 auto;
+}
+</style>

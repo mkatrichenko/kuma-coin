@@ -1,16 +1,14 @@
 const { resolve } = require("path");
 
 module.exports = {
-    filenameHashing: false,
+  filenameHashing: false,
   productionSourceMap: false,
-    configureWebpack: {
-        resolve: {
-          alias: {
-            "@": resolve(__dirname, "./src")
-          }
-        }
+  configureWebpack: {
+    resolve: {
+      alias: {
+        "@": resolve(__dirname, "./src"),
       },
-      publicPath: process.env.NODE_ENV === 'production'
-    ? '/kuma-coin/'
-    : '/'
-  }
+    },
+  },
+  publicPath: process.env.NODE_ENV === "production" ? "/" : "/",
+};

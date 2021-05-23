@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style>
-/* @import "./assets/scss/main.scss"; */
+@import "./assets/scss/variables.scss";
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

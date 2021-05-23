@@ -10,12 +10,15 @@
             <a :href="item.link" class="nav_link">{{ item.label }}</a>
           </li>
         </ul>
+        <BaseButton link="#ololo" label="Buy Kuma Inu" size="sm"/>
       </div>
     </div>
   </header>
 </template>
 
 <script>
+import BaseButton from '@/components/Button.vue'
+
 const NAV_LIST = [
   {
     label: "Apps",
@@ -36,6 +39,9 @@ const NAV_LIST = [
 ];
 export default {
   name: "Header",
+  components: {
+      BaseButton
+  },
   data() {
     return {
       NAV_LIST: NAV_LIST,
@@ -63,12 +69,16 @@ export default {
   }
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+}
+
 .nav__container {
   display: flex;
   list-style: none;
 
   .nav_link {
-    
     font-family: "Lato";
     font-style: normal;
     font-weight: 600;
@@ -78,5 +88,16 @@ export default {
     margin: 0 17px;
     text-decoration: none;
   }
+}
+
+.buy_btn {
+  padding: 8px 16px;
+  background-color: #fff;
+  color: var(--brand);
+  font-family: "Lato";
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 16px;
+  margin-left: 20px;
 }
 </style>

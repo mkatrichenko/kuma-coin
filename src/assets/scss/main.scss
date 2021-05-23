@@ -1,7 +1,5 @@
 @import "fonts.scss";
-@import "normalize";
-
-
+@import "normalize.scss";
 
 body {
     margin: 0;
@@ -18,8 +16,6 @@ body {
 .container {
     margin: 0 auto;
     max-width: 1024px;
+    background-color: purple;
 }
 
-$brand: rgba(246, 163, 47, 1);
-$text-primary: rgba(26, 30, 37, 1);
-$text-secondary: rgba(88, 92, 110, 1);

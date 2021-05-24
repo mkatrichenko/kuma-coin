@@ -27,7 +27,7 @@
             1. <span class="orange">Installation.</span>
           </div>
           <div class="card__text">
-            Download and install <a href="#1" class="link">Metamask wallet.</a>
+            <h4>	Download and install <br><a href="#1" class="link">Metamask wallet.</a></h4>
           </div>
         </div>
         <div class="buy__card">
@@ -36,7 +36,7 @@
           </div>
           <div class="card__title">2. <span class="orange">Buy ETH.</span></div>
           <div class="card__text">
-            Run <a href="#1" class="link">Metamask</a> and then press "BUY".
+            <h4>Run <a href="#1" class="link">Metamask</a> and then <br> press "BUY".</h4>
           </div>
         </div>
         <div class="buy__card">
@@ -44,7 +44,7 @@
             <img src="@/assets/img/buy/Swap.png" alt="" />
           </div>
           <div class="card__title">3. <span class="orange">Swap.</span></div>
-          <div class="card__text">Go to UNISWAP to swap ETH to $KUMA.</div>
+          <div class="card__text"><h4>Go to UNISWAP to swap <br>ETH to $KUMA.</h4></div>
         </div>
         <div class="buy__card">
           <div class="card__icon">
@@ -52,7 +52,7 @@
           </div>
           <div class="card__title">4. <span class="orange">Hold.</span></div>
           <div class="card__text">
-            Now you just watch your $KUMA tokens grow.
+            <h4>Now you just watch your <br> $KUMA tokens grow.</h4>
           </div>
         </div>
       </div>
@@ -62,7 +62,7 @@
             <img src="@/assets/img/arrow.png" alt="" />
           </div>
         <div class="block__title">Currently you can buy $KUMA here:</div>
-        <BaseButton class="buy_btn" link="#ololo" label="Buy Kuma Inu" type="secondary"/>
+        <BaseButton class="buy_btn" link="https://app.uniswap.org/#/swap?outputCurrency=0xb525ecee288b99216cd481c56b6efbdbe9bf90b5&use=V2" label="Buy Kuma Inu" type="secondary"/>
         <div class="block__subtitle">Price chart is here:</div>
         <BaseButton
           class="buy_btn"
@@ -107,6 +107,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .buy {
+	margin-top: 100px;
   padding-top: 80px;
   padding-bottom: 100px;
 }
@@ -177,6 +178,8 @@ export default {
 }
 
 .card__container {
+	margin-top: 100px;
+	min-width: 1440px;
   display: flex;
   align-items: center;
   justify-content: start;
@@ -186,6 +189,8 @@ export default {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
+		width: 25%;
+    padding-left: 80px;
   }
 
   .card__icon {
@@ -199,7 +204,7 @@ export default {
 
   .card__title {
     margin-bottom: 16px;
-    font-family: Quicksand;
+    font-family: "Quicksand";
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -212,7 +217,7 @@ export default {
   }
 
   .card__text {
-    font-family: Quicksand;
+    font-family: "Quicksand";
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -221,6 +226,7 @@ export default {
 
     .link {
       text-decoration: underline;
+			color: #1A1E25;
     }
   }
 }

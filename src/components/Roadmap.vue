@@ -4,7 +4,7 @@
       <h2>Roadmap</h2>
     </div>
 		<div class="roadmap__inner">
-        <p>Our roadmap represents our most obvious goals</p>
+        <h5>Our roadmap represents our most obvious goals</h5>
       </div>
 		<div class="paw">
 			<img src="..//assets/img/paw.png" alt="">
@@ -77,6 +77,9 @@
 </script>
 
 <style lang="scss" scoped>
+.roadmap__container {
+	padding-top: 100px;
+}
 .roadmap__title {
 	font-family: "Patrick";
 	font-style: normal;
@@ -85,28 +88,38 @@
 	line-height: 65px;
 }
 .roadmap__inner {
-	font-family: Quicksand;
+	font-family: "Quicksand";
 	font-style: normal;
 	font-weight: 500;
 	font-size: 20px;
 	line-height: 28px;
 }
 .paw {
-	margin-bottom: -900px;
+	position: absolute;
+  bottom: 870px;
+  right: 74%;
+  width: 180px;
 }
 .vector__first {
-	margin-bottom: -400px;
+	position: absolute;
+  bottom: 1550px;
+  right: 46%;
+  width: 180px;
 }
 .vector__second {
-	margin-top: -200px;
+	position: absolute;
+  bottom: 1160px;
+  right: 48%;
+  width: 180px;
 }
 
 .list {
+	margin-top: -100px;
   display: flex;
-  margin-top: 70px;
 	flex-wrap: wrap;
 }
 .roadmap__list {
+	margin-top: 150px;
 	flex-direction: column;
 	list-style: none;
 	font-family: "Quicksand";

@@ -12,7 +12,7 @@
         </ul>
         <BaseButton
           class="buy_btn"
-          link="#ololo"
+          link="https://app.uniswap.org/#/swap?outputCurrency=0xb525ecee288b99216cd481c56b6efbdbe9bf90b5&use=V2"
           label="Buy Kuma Inu"
           size="sm"
         />

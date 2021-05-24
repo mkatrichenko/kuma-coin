@@ -59,4 +59,15 @@ export default {
 	max-width: 1376px;
 	margin: 0 auto;
 }
+.products_container h2 {
+font-family: "Patrick";
+font-style: normal;
+font-weight: normal;
+font-size: 48px;
+line-height: 65px;
+text-align: center;
+
+color: #232323;
+
+}
 </style>

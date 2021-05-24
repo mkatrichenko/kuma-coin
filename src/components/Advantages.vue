@@ -60,6 +60,7 @@ export default {
 }
 
 .advantages__card {
+
   border: 3px solid var(--brand);
   box-sizing: border-box;
   border-radius: 16px;
@@ -67,7 +68,20 @@ export default {
   margin: 0 23px;
   padding-top: 75px;
   width: calc(33% - 23px);
-
+.card__title {
+	font-family: "Quicksand";
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 28px;
+}
+.card__text {
+	font-family: Quicksand;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 24px;
+}
   .card__icon {
     position: absolute;
     width: 144px;
@@ -105,7 +119,7 @@ export default {
 .paws {
     position: absolute;
     bottom: -180px;
-    right: 11%;
+    right: 24%;
     width: 180px;
 
     img {

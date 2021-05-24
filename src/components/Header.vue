@@ -27,19 +27,19 @@ import BaseButton from "@/components/Button.vue";
 const NAV_LIST = [
   {
     label: "Apps",
-    link: "#kokoko",
+    link: "/",
   },
   {
     label: "Price Chart",
-    link: "#kokoko",
+    link: "/",
   },
   {
     label: "Donate",
-    link: "#kokoko",
+    link: "/",
   },
   {
     label: "More",
-    link: "#kokoko",
+    link: "/",
   },
 ];
 export default {

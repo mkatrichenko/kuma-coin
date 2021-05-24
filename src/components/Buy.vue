@@ -66,7 +66,7 @@
         <div class="block__subtitle">Price chart is here:</div>
         <BaseButton
           class="buy_btn"
-          link="#ololo"
+          link="https://www.dextools.io/app/uniswap/pair-explorer/0x27fd2f5942049bcd601428c7bcede364180b4b3f"
           label="WATCH PRICE ON DEXTOOLS"
           type="accent"
         />

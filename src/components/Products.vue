@@ -21,7 +21,7 @@ const CARD_LIST = [
 		text: "Yield Farming Protocol for meme coins. Deposit your meme coins, earn passive income.",
 		btn: {
 			label: "Go to the App",
-		link: "#kokoko",
+		link: "https://app.kumatoken.com",
 		}
 		
 	}, 
@@ -30,7 +30,8 @@ const CARD_LIST = [
 		text: "Decentralized, vAMM based perpetual contract trading protocol for meme coins.Up to 25x long/short leverage trading.",
 		btn: {
 			label: "Comming Soon",
-		link: "#kokoko",
+		link: "1",
+		disabled: true
 		}
 		
 	},

@@ -7,7 +7,7 @@
       <p>{{ text }}</p>
     </div>
     <div class="card__btn">
-      <BaseButton :link="btn.link" :label="btn.label" size="md" />
+      <BaseButton :link="btn.link" :label="btn.label" size="md" :disabled="btn.disabled"/>
     </div>
   </div>
 </template>

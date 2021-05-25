@@ -17,7 +17,11 @@
           size="sm"
         />
       </div>
-      <Slide right class="burger_menu">
+      <div class="burger">
+        <img src="@/assets/img/hamburger.svg" alt="" />
+      </div>
+      <div class="mobile__nav"></div>
+      <!-- <Slide right class="burger_menu">
         <div class="burger">
           <ul class="burger__list">
 <li v-for="(item, index) in NAV_LIST" :key="index" class="nav__item">
@@ -32,14 +36,14 @@
             size="sm"
           />
         </div>
-      </Slide>
+      </Slide> -->
     </div>
   </header>
 </template>
 
 <script>
 import BaseButton from "@/components/Button.vue";
-import { Slide } from "vue-burger-menu";
+// import { Slide } from "vue-burger-menu";
 
 const NAV_LIST = [
   {
@@ -63,7 +67,7 @@ export default {
   name: "Header",
   components: {
     BaseButton,
-    Slide,
+    // Slide,
   },
   data() {
     return {
@@ -158,44 +162,58 @@ export default {
 }
 
 .burger {
-  flex-direction: column;
-  align-items: start;
+  position: absolute;
+  width: 18px;
+  height: 16px;
+  right: 20px;
+  top: 16px;
+  cursor: pointer;
+  display: none;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+
+  img {
+    width: 100%;
+  }
 }
 
-::v-deep {.bm-burger-button {
-      position: fixed;
-      width: 18px;
-      height: 16px;
-      left: 20px;
-      top: 16px;
-      cursor: pointer;
-    }
+::v-deep {
+  .bm-burger-button {
+    position: fixed;
+    width: 18px;
+    height: 16px;
+    left: 20px;
+    top: 16px;
+    cursor: pointer;
+  }
 }
 
 @media screen and (max-width: 1200px) {
   .header__container {
-		width: 960px;
-	}
+    width: 960px;
+  }
 }
 
 /* 768px - 992px */
 @media screen and (max-width: 992px) {
   .header__container {
-		width: 720px;
-	}
+    width: 720px;
+  }
 }
 
 /* 576px - 768px */
 @media screen and (max-width: 768px) {
-	.header__container {
-		width: 560px;
-	}
+  .header__container {
+    width: 560px;
+  }
 }
 
 /* 0 - 576px */
 @media screen and (max-width: 576px) {
-	.header__container {
-		width: 90%;
-	}
+  .header__container {
+    width: 90%;
+  }
 }
 </style>

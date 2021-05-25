@@ -51,6 +51,14 @@ export default {
   font-weight: normal;
   font-size: 48px;
   line-height: 65px;
+
+  @media screen and (max-width: 767px) {
+    h2 {
+      font-size: 36px;
+      line-height: 1.3;
+      margin: 0;
+    }
+  }
 }
 .inner__direction {
   font-family: "Quicksand";
@@ -58,6 +66,14 @@ export default {
   font-weight: 500;
   font-size: 20px;
   line-height: 28px;
+
+  @media screen and (max-width: 767px) {
+    h3 {
+      font-size: 18px;
+      line-height: 1.3;
+      margin: 16px 0 12px;
+    }
+  }
 }
 .text__direction {
   display: flex;
@@ -68,16 +84,23 @@ export default {
   font-weight: 500;
   font-size: 14px;
   line-height: 24px;
+
+  @media screen and (max-width: 767px) {
+    p {
+      margin: 0;
+    }
+  }
 }
 .img__direction {
   position: absolute;
   top: 210px;
   right: -140px;
   z-index: 2;
-}
-.img__direction img {
-  width: 294px;
-  height: 329.13px;
+   width: 294px;
+
+   img {
+     width: 100%;
+   }
 }
 
 @media screen and (max-width: 1200px) {
@@ -133,7 +156,12 @@ export default {
 		justify-content: space-around;
 		position: relative;
 		top: 0;
-		right: 0;
+    right: 0;
+    width: 120px;
+
+    img {
+      width: 100%;
+    }
 	}
 	.text__direction {
 		padding: 0 15px;

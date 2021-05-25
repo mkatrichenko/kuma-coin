@@ -2,7 +2,7 @@
   <div class="head">
     <div class="container">
       <h1 class="head__title">
-        We present you The <br /><span class="orange">New Icon <div class="bg"></div></span>
+        Kuma Dex
       </h1>
       <p class="head__text">
         Kuma Inu ($KUMA) is a community-focused, decentralized cryptocurrency
@@ -50,6 +50,8 @@ export default {
 }
 
 .container {
+  max-width: 1200px;
+
   @media screen and (max-width: 767px) {
     display: flex;
     flex-direction: column;
@@ -61,39 +63,18 @@ export default {
 .head__title {
   margin: 0;
   font-family: "Patrick";
-  font-weight: normal;
+  font-weight: 600;
   font-size: 94px;
-  line-height: 63px;
+  line-height: 83px;
   color: #fefefe;
-  max-width: 400px;
+  max-width: 275px;
   text-align: left;
   position: relative;
   z-index: 2;
-
-  .orange {
-    position: relative;
-    z-index: 3;
-    margin-left: 16px;
-    font-size: 48px;
-    line-height: 1;
-    margin-top: 24px;
-    display: flex;
-
-    .bg {
-      position: absolute;
-      background-color: var(--brand);
-      top: -8px;
-      bottom: -8px;
-      left: -16px;
-      z-index: -1;
-      border-radius: 16px;
-      width: 186px;
-    }
-  }
 }
 
 .head__text {
-  margin-top: 60px;
+  margin-top: 36px;
   max-width: 335px;
   font-family: Lato;
   font-style: normal;
@@ -112,7 +93,7 @@ export default {
 .main__img {
   position: absolute;
   max-width: 730px;
-  width: 47%;
+  width: 40%;
   left: 55%;
   transform: translateX(-50%);
   bottom: -20%;
@@ -139,7 +120,7 @@ export default {
 
   &.coin_1 {
     width: 206px;
-    left: 73%;
+    right: 10%;
     z-index: 4;
     bottom: 16px;
 
@@ -150,7 +131,7 @@ export default {
 
   &.coin_2 {
     width: 136px;
-    left: 65%;
+    right: 15%;
     z-index: 4;
     bottom: 50%;
 

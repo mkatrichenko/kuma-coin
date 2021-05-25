@@ -117,6 +117,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
 }
 
 .logo__container {

@@ -204,7 +204,18 @@ export default {
   margin-top: 100px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1376px;
+  padding: 0 16px;
+
+  @media screen and (max-width: 1400px) {
+    max-width: 1012px;
+  }
+
+  @media screen and (max-width: 124px) {
+    max-width: 880px;
+  }
 
   @media screen and (max-width: 767px) {
     margin-top: 16px;
@@ -267,7 +278,7 @@ export default {
       h4 {
         margin: 0;
       }
-     margin-bottom: 8px;
+      margin-bottom: 8px;
     }
 
     .link {
@@ -331,10 +342,7 @@ export default {
   .buy__block .arrow__icon img {
     display: none;
   }
-  .card__container {
-    justify-content: start;
-    flex-direction: column;
-  }
+  
   .copy__container {
     padding: 15px 30px;
     width: 300px;
@@ -361,6 +369,7 @@ export default {
   .card__container {
     justify-content: start;
     flex-direction: column;
+    
   }
   .copy__container {
     padding: 15px 30px;
@@ -388,21 +397,21 @@ export default {
   .card__container {
     justify-content: start;
     flex-direction: column;
-	}
-	.copy__container {
-		padding: 15px 30px;
-		width: 300px;
-	}
-	.copy_address {
-		font-size: 10px;
-	}
-	.buy__title {
-		font-size: 36px;
-	}
-	.card__container .buy__card {
-		text-align: center;
+  }
+  .copy__container {
+    padding: 15px 30px;
+    width: 300px;
+  }
+  .copy_address {
+    font-size: 10px;
+  }
+  .buy__title {
+    font-size: 36px;
+  }
+  .card__container .buy__card {
+    text-align: center;
     align-items: center;
-		padding: 0;
-	}
+    padding: 0;
+  }
 }
 </style>

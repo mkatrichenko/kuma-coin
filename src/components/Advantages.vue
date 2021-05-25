@@ -53,7 +53,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .advantages {
-  padding-top: 140px;
+  padding-top: 195px;
   padding-bottom: 50px;
   display: flex;
   align-items: center;

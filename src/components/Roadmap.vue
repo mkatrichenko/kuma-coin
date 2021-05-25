@@ -53,7 +53,7 @@
         <ul>
           <li>- Kuma Dex Staking Launch</li>
           <li>- Market Expansion</li>
-          <li>- Kuma Inu NFT Products (Marketplace + AuctionPad)</li>
+          <li>- Kuma Inu NFT Products <br/>(Marketplace + AuctionPad)</li>
           <li>- Influencer Marketing</li>
         </ul>
       </div>
@@ -79,9 +79,10 @@
 <style lang="scss" scoped>
 .roadmap__container {
   padding-top: 100px;
+  position: relative;
 
   @media screen and (max-width: 767px) {
-   padding-top: 32px;
+    padding-top: 32px;
   }
 }
 .roadmap__title {
@@ -95,7 +96,7 @@
     font-size: 36px;
     line-height: 1.3;
 
-    h2{
+    h2 {
       margin: 0 0 16px;
     }
   }
@@ -118,27 +119,39 @@
 }
 .paw {
   position: absolute;
-  bottom: 870px;
-  right: 74%;
-  width: 180px;
+  top: 170px;
+  right: -100px;
+  width: 1250px;
+
+  img {
+    width: 100%;
+  }
 }
 .vector__first {
   position: absolute;
-  bottom: 1550px;
-  right: 46%;
-  width: 180px;
+  top: 370px;
+  right: 42%;
+  width: 273px;
+
+  img {
+    width: 100%;
+  }
 }
 .vector__second {
   position: absolute;
-  bottom: 1160px;
-  right: 48%;
-  width: 180px;
+  top: 925px;
+  right: 42%;
+  width: 295px;
+
+  img {
+    width: 100%;
+  }
 }
 
 .list {
-  margin-top: -100px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 
   @media screen and (max-width: 767px) {
     flex-wrap: nowrap;
@@ -148,21 +161,35 @@
   }
 }
 .roadmap__list {
-  margin-top: 150px;
+  margin-bottom: 150px;
   flex-direction: column;
   list-style: none;
+  align-items: start;
+  justify-content: start;
   font-family: "Quicksand";
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 28px;
-  width: 50%;
+  width: 35%;
+  text-align: left;
+
+  li {
+    margin-bottom: 20px;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 12px;
+    }
+  }
 
   @media screen and (max-width: 767px) {
     width: 100%;
     margin-top: 16px;
     font-size: 16px;
     line-height: 18px;
+    margin: 0 auto 16px;
+    max-width: 310px;
+    
 
     ul {
       padding: 0;
@@ -179,58 +206,57 @@
   }
 }
 
-
 @media screen and (max-width: 1200px) {
   .vector__first {
-		display: none;
-	}
-	.vector__second {
-		display: none;
-	}
-	.paw {
-		display: none;
-	}
+    display: none;
+  }
+  .vector__second {
+    display: none;
+  }
+  .paw {
+    display: none;
+  }
 }
 
 /* 768px - 992px */
 @media screen and (max-width: 992px) {
   .vector__first {
-		display: none;
-	}
-	.vector__second {
-		display: none;
-	}
-	.paw {
-		display: none;
-	}
+    display: none;
+  }
+  .vector__second {
+    display: none;
+  }
+  .paw {
+    display: none;
+  }
 }
 
 /* 576px - 768px */
 @media screen and (max-width: 768px) {
   .vector__first {
-		display: none;
-	}
-	.vector__second {
-		display: none;
-	}
-	.paw {
-		display: none;
-	}
+    display: none;
+  }
+  .vector__second {
+    display: none;
+  }
+  .paw {
+    display: none;
+  }
 }
 
 /* 0 - 576px */
 @media screen and (max-width: 576px) {
-	.roadmap__inner	h5 {
-		padding: 0 20px;
-	}
-	.vector__first {
-		display: none;
-	}
-	.vector__second {
-		display: none;
-	}
-	.paw {
-		display: none;
-	}
+  .roadmap__inner h5 {
+    padding: 0 20px;
+  }
+  .vector__first {
+    display: none;
+  }
+  .vector__second {
+    display: none;
+  }
+  .paw {
+    display: none;
+  }
 }
 </style>

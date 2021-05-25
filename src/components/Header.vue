@@ -120,7 +120,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
-  padding-top: 8px;
+  padding: 8px 0;
 }
 
 .logo__container {

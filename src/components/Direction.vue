@@ -31,7 +31,6 @@ export default {
 
 <style lang="scss" scoped>
 .direction {
-  padding-top: 200px;
   padding-bottom: 110px;
 }
 .direction__container {

@@ -17,24 +17,26 @@
           size="sm"
         />
       </div>
-      <div class="burger">
+      <div class="burger" @click="openMenu">
         <img src="@/assets/img/hamburger.svg" alt="" />
       </div>
-      <div class="mobile__nav"></div>
-      <!-- <Slide right class="burger_menu">
-        <div class="burger">
-          <ul class="burger__list">
-<li v-for="(item, index) in NAV_LIST" :key="index" class="nav__item">
+      <div :class="['mobile__nav', {active: isMenuOpened}]">
+        <ul class="burger__list">
+          <li v-for="(item, index) in NAV_LIST" :key="index" class="nav__item">
             <a :href="item.link" class="nav_link">{{ item.label }}</a>
           </li>
-          </ul>
+        </ul>
+
+        <BaseButton
+          class="buy_btn"
+          link="https://app.uniswap.org/#/swap?outputCurrency=0xb525ecee288b99216cd481c56b6efbdbe9bf90b5&use=V2"
+          label="Buy Kuma Inu"
+          size="sm"
+        />
+      </div>
+      <!-- <Slide right class="burger_menu">
+        <div class="burger">
           
-          <BaseButton
-            class="buy_btn"
-            link="https://app.uniswap.org/#/swap?outputCurrency=0xb525ecee288b99216cd481c56b6efbdbe9bf90b5&use=V2"
-            label="Buy Kuma Inu"
-            size="sm"
-          />
         </div>
       </Slide> -->
     </div>
@@ -73,6 +75,7 @@ export default {
     return {
       NAV_LIST: NAV_LIST,
       scrollPosition: 0,
+      isMenuOpened: false
     };
   },
   mounted() {
@@ -82,6 +85,9 @@ export default {
     updateScroll() {
       this.scrollPosition = window.scrollY;
     },
+    openMenu() {
+      this.isMenuOpened = !this.isMenuOpened
+    }
   },
 };
 </script>
@@ -179,41 +185,20 @@ export default {
   }
 }
 
-::v-deep {
-  .bm-burger-button {
-    position: fixed;
-    width: 18px;
-    height: 16px;
-    left: 20px;
-    top: 16px;
-    cursor: pointer;
-  }
-}
+.mobile__nav {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+  transition: 0.3s all ease-out;
 
-@media screen and (max-width: 1200px) {
-  .header__container {
-    width: 960px;
+  &.active {
+    transform: none;
   }
-}
 
-/* 768px - 992px */
-@media screen and (max-width: 992px) {
-  .header__container {
-    width: 720px;
-  }
-}
-
-/* 576px - 768px */
-@media screen and (max-width: 768px) {
-  .header__container {
-    width: 560px;
-  }
-}
-
-/* 0 - 576px */
-@media screen and (max-width: 576px) {
-  .header__container {
-    width: 90%;
+  @media screen and (max-width: 767px) {
+    display: block;
   }
 }
 </style>

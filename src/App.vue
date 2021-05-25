@@ -45,6 +45,8 @@ export default {
   color: #2c3e50;
   position: relative;
   width: 100%;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 body {

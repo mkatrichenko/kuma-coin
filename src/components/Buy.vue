@@ -388,13 +388,21 @@ export default {
   .card__container {
     justify-content: start;
     flex-direction: column;
-  }
-  .copy__container {
-    padding: 15px 30px;
-    width: 300px;
-  }
-  .copy_address {
-    font-size: 10px;
-  }
+	}
+	.copy__container {
+		padding: 15px 30px;
+		width: 300px;
+	}
+	.copy_address {
+		font-size: 10px;
+	}
+	.buy__title {
+		font-size: 36px;
+	}
+	.card__container .buy__card {
+		text-align: center;
+    align-items: center;
+		padding: 0;
+	}
 }
 </style>

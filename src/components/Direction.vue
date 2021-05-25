@@ -149,7 +149,6 @@ export default {
 	.direction{
 		padding: 0 10px;
 		padding-bottom: 30px;
-		padding-left: 30px;
 	}
 	.img__direction {
 		display: flex;
@@ -165,6 +164,12 @@ export default {
 	}
 	.text__direction {
 		padding: 0 15px;
+	}
+	.title__direction {
+		h2 {
+			font-size: 32px;
+		}
+	
 	}
 }
 </style>

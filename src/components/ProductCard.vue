@@ -7,11 +7,15 @@
       <p>{{ text }}</p>
     </div>
     <div class="card__btn">
-      <BaseButton :link="btn.link" :label="btn.label" size="md" :disabled="btn.disabled"/>
+      <BaseButton
+        :link="btn.link"
+        :label="btn.label"
+        size="md"
+        :disabled="btn.disabled"
+      />
     </div>
   </div>
 </template>
-
 
 <script>
 import BaseButton from "@/components/Button.vue";
@@ -30,13 +34,17 @@ export default {
 
 <style lang="scss" scoped>
 .card__container {
-  width: 45% !important;
+  width: 45%;
   background: #f6a32f;
   border-radius: 16px;
   padding: 0 10px 40px 10px;
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 }
 .cards__container {
-	display: flex;
+  display: flex;
   justify-content: space-between;
   width: 100%;
 }
@@ -72,14 +80,11 @@ export default {
 }
 
 /* 576px - 768px */
-@media screen and (max-width: 768px) {
-}
 
 /* 0 - 576px */
 @media screen and (max-width: 576px) {
-	.card__btn {
-		display: block;
-		
-	}
+  .card__btn {
+    display: flex;
+  }
 }
 </style>

@@ -94,22 +94,17 @@ export default {
 		padding: 0px 10px 0px 10px;
 	}
 	.cards__container {
-		justify-content: space-between;
 	}
 }
 
 /* 576px - 768px */
 @media screen and (max-width: 768px) {
 }
-	.card__container {
-		width: 100%;
-	}
 	.card {
 		display: block;
 		padding: 0px 10px 0px 10px;
 	}
 	.cards__container {
-		justify-content: space-between;
 	}
 /* 0 - 576px */
 @media screen and (max-width: 576px) {
@@ -118,7 +113,10 @@ export default {
 		padding: 0px 10px 0px 10px;
 	}
 	.cards__container {
-		justify-content: space-between;
+		flex-direction: column;
+		width: 100%;
+		display: block;
+		justify-content: center;
 	}
 }
 </style>

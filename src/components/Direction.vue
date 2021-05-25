@@ -79,4 +79,64 @@ export default {
   width: 294px;
   height: 329.13px;
 }
+
+@media screen and (max-width: 1200px) {
+  .img__direction {
+		display: flex;
+		justify-content: space-around;
+		position: relative;
+		top: 0;
+		right: 0;
+	}
+	.text__direction {
+		padding: 0 15px;
+	}
+}
+
+/* 768px - 992px */
+@media screen and (max-width: 992px) {
+  .img__direction {
+		display: flex;
+		justify-content: space-around;
+		position: relative;
+		top: 0;
+		right: 0;
+	}
+	.text__direction {
+		padding: 0 15px;
+	}
+}
+
+/* 576px - 768px */
+@media screen and (max-width: 768px) {
+  .img__direction {
+		display: flex;
+		justify-content: space-around;
+		position: relative;
+		top: 0;
+		right: 0;
+	}
+	.text__direction {
+		padding: 0 15px;
+	}
+}
+
+/* 0 - 576px */
+@media screen and (max-width: 576px) {
+	.direction{
+		padding: 0 10px;
+		padding-bottom: 30px;
+		padding-left: 30px;
+	}
+	.img__direction {
+		display: flex;
+		justify-content: space-around;
+		position: relative;
+		top: 0;
+		right: 0;
+	}
+	.text__direction {
+		padding: 0 15px;
+	}
+}
 </style>

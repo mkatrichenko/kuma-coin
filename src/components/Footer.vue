@@ -49,7 +49,6 @@ export default {
 
 <style lang="scss" scoped>
 .footer__container {
-  width: 100%;
   max-width: 1376px;
   background: #f6a32f;
   border-radius: 16px;
@@ -97,5 +96,84 @@ export default {
 }
 .footer__vector {
   padding-top: 125px;
+}
+
+
+// Responsive
+
+/* 992px - 1200px */
+@media screen and (max-width: 1200px) {
+  .footer__container {
+    width: 960px;
+  }
+	.container {
+		flex-direction: column;
+	}
+	.footer__vector {
+		display: none;
+	}
+	.footer__text {
+		padding: 25px;
+	}
+	.footer__btn {
+		margin: 0px 0 30px 0;
+	}
+}
+
+/* 768px - 992px */
+@media screen and (max-width: 992px) {
+  .footer__container {
+    width: 720px;
+  }
+	.container {
+		flex-direction: column;
+	}
+	.footer__vector {
+		display: none;
+	}
+	.footer__text {
+		padding: 25px;
+	}
+	.footer__btn {
+		margin: 0px 0 30px 0;
+	}
+}
+
+/* 576px - 768px */
+@media screen and (max-width: 768px) {
+  .footer__container {
+    width: 540px;
+  }
+	.container {
+		flex-direction: column;
+	}
+	.footer__vector {
+		display: none;
+	}
+	.footer__text {
+		padding: 25px;
+	}
+	.footer__btn {
+		margin: 0px 0 30px 0;
+	}
+}
+
+/* 0 - 576px */
+@media screen and (max-width: 576px) {
+  .footer__container {
+    width: 90%;
+  }
+	.container {
+		flex-direction: column;
+	}
+	.footer__vector {
+		display: none;
+	}
+	.footer__text {
+		padding: 25px;
+	}
+	.footer__btn {
+		margin: 0px 0 30px 0;
+	}
 }
 </style>

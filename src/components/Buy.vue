@@ -48,7 +48,7 @@
         </div>
         <div class="buy__card">
           <div class="card__icon">
-            <img src="@/assets/img/buy/settings.png" alt="" />
+            <img src="@/assets/img/buy/Hold.png" alt="" />
           </div>
           <div class="card__title">4. <span class="orange">Hold.</span></div>
           <div class="card__text">
@@ -182,12 +182,12 @@ export default {
 	min-width: 1440px;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
 
   .buy__card {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: none;
     text-align: left;
 		width: 25%;
     padding-left: 80px;
@@ -263,5 +263,39 @@ export default {
           width: 100%;
       }
   }
+}
+
+
+// Responsive
+
+/* 992px - 1200px */
+@media screen and(max-width: 1200px){
+	
+}
+
+/* 768px - 992px */
+@media screen and(max-width: 992px){
+	
+}
+
+/* 576px - 768px */
+@media screen and(max-width: 768px){
+	
+}
+
+/* 0 - 576px */
+@media screen and(max-width: 576px){
+	.buy__title {
+		padding: 0 20px;
+	}
+	.buy__block .block__title {
+		padding: 0 10px;
+	}
+	.buy__block{
+		padding: 10px 15px;
+	}
+	.buy__block .arrow__icon img {
+		display: none;
+	}
 }
 </style>

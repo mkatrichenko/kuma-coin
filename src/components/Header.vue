@@ -119,4 +119,23 @@ export default {
 .buy_btn {
   margin-left: 20px;
 }
+
+@media screen and (max-width: 1200px) {
+  
+}
+
+/* 768px - 992px */
+@media screen and (max-width: 992px) {
+  
+}
+
+/* 576px - 768px */
+@media screen and (max-width: 768px) {
+  
+}
+
+/* 0 - 576px */
+@media screen and (max-width: 576px) {
+
+}
 </style>

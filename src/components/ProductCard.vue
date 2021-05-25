@@ -1,5 +1,5 @@
 <template>
-  <div class="card__container container">
+  <div class="card__container">
     <div class="card__header">
       <h3 class="card__title">{{ title }}</h3>
     </div>
@@ -30,11 +30,15 @@ export default {
 
 <style lang="scss" scoped>
 .card__container {
-	width: 45%;
-	justify-content: center;
+  width: 45% !important;
   background: #f6a32f;
   border-radius: 16px;
-	padding: 0 10px 30px 10px;
+  padding: 0 10px 40px 10px;
+}
+.cards__container {
+	display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 .card__title {
   font-family: "Patrick";
@@ -54,12 +58,28 @@ export default {
   text-align: center;
   color: #ffffff;
 }
-.card__text p {
-
-}
 .card__btn {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+/* 768px - 992px */
+@media screen and (max-width: 992px) {
+}
+
+/* 576px - 768px */
+@media screen and (max-width: 768px) {
+}
+
+/* 0 - 576px */
+@media screen and (max-width: 576px) {
+	.card__btn {
+		display: block;
+		
+	}
 }
 </style>

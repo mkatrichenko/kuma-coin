@@ -76,7 +76,7 @@ export default {
 	line-height: 28px;
 }
 .card__text {
-	font-family: Quicksand;
+	font-family: "Quicksand";
 	font-style: normal;
 	font-weight: 500;
 	font-size: 14px;
@@ -125,5 +125,38 @@ export default {
     img {
         width: 100%;
     }
+}
+
+
+@media screen and (max-width: 1200px) {
+  
+}
+
+/* 768px - 992px */
+@media screen and (max-width: 992px) {
+  
+}
+
+/* 576px - 768px */
+@media screen and (max-width: 768px) {
+  
+}
+
+/* 0 - 576px */
+@media screen and (max-width: 576px) {
+	.container{ 
+		display: block;
+		padding-left: 30px;
+	}
+	.advantages__card {
+		width: 100%;
+		margin: 70px 20px 20px 20px
+	}
+	.paws {
+		display: none;
+	}
+	.coin img{
+		display: none;
+	}
 }
 </style>

@@ -145,18 +145,25 @@ export default {
 /* 0 - 576px */
 @media screen and (max-width: 576px) {
 	.container{ 
+		width: 280px;
 		display: block;
-		padding-left: 30px;
+		margin: 0 auto;
 	}
 	.advantages__card {
 		width: 100%;
-		margin: 70px 20px 20px 20px
+		margin: 70px 0;
+	}
+	.advantages__card .card__text {
+		padding: 0 15px;
 	}
 	.paws {
 		display: none;
 	}
 	.coin img{
 		display: none;
+	}
+	.card__icon {
+		width: 100px;
 	}
 }
 </style>

@@ -352,5 +352,13 @@ export default {
 	.copy_address {
 		font-size: 10px;
 	}
+	.buy__title {
+		font-size: 36px;
+	}
+	.card__container .buy__card {
+		text-align: center;
+    align-items: center;
+		padding: 0;
+	}
 }
 </style>

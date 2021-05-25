@@ -94,7 +94,6 @@ export default {
 		padding: 0px 10px 0px 10px;
 	}
 	.cards__container {
-		justify-content: space-between;
 	}
 }
 
@@ -109,7 +108,6 @@ export default {
 		padding: 0px 10px 0px 10px;
 	}
 	.cards__container {
-		justify-content: space-between;
 	}
 /* 0 - 576px */
 @media screen and (max-width: 576px) {
@@ -118,7 +116,10 @@ export default {
 		padding: 0px 10px 0px 10px;
 	}
 	.cards__container {
-		justify-content: space-between;
+		flex-direction: column;
+		width: 750px;
+		display: block;
+		justify-content: center;
 	}
 }
 </style>

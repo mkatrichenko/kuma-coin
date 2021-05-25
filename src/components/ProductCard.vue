@@ -78,8 +78,7 @@ export default {
 /* 0 - 576px */
 @media screen and (max-width: 576px) {
 	.card__btn {
-		display: block;
-		
+		display: flex;
 	}
 }
 </style>

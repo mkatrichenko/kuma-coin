@@ -17,12 +17,29 @@
           size="sm"
         />
       </div>
+      <Slide right class="burger_menu">
+        <div class="burger">
+          <ul class="burger__list">
+<li v-for="(item, index) in NAV_LIST" :key="index" class="nav__item">
+            <a :href="item.link" class="nav_link">{{ item.label }}</a>
+          </li>
+          </ul>
+          
+          <BaseButton
+            class="buy_btn"
+            link="https://app.uniswap.org/#/swap?outputCurrency=0xb525ecee288b99216cd481c56b6efbdbe9bf90b5&use=V2"
+            label="Buy Kuma Inu"
+            size="sm"
+          />
+        </div>
+      </Slide>
     </div>
   </header>
 </template>
 
 <script>
 import BaseButton from "@/components/Button.vue";
+import { Slide } from "vue-burger-menu";
 
 const NAV_LIST = [
   {
@@ -46,6 +63,7 @@ export default {
   name: "Header",
   components: {
     BaseButton,
+    Slide,
   },
   data() {
     return {
@@ -98,25 +116,59 @@ export default {
 .nav {
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 
 .nav__container {
   display: flex;
   list-style: none;
+}
 
-  .nav_link {
-    font-family: "Lato";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
-    color: #fff;
-    margin: 0 17px;
-    text-decoration: none;
-  }
+.nav_link {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #fff;
+  margin: 0 17px;
+  text-decoration: none;
 }
 
 .buy_btn {
   margin-left: 20px;
+}
+
+.burger_menu {
+  display: none;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+}
+
+.burger__list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.burger {
+  flex-direction: column;
+  align-items: start;
+}
+
+::v-deep {.bm-burger-button {
+      position: fixed;
+      width: 18px;
+      height: 16px;
+      left: 20px;
+      top: 16px;
+      cursor: pointer;
+    }
 }
 </style>

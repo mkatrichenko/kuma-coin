@@ -1,5 +1,9 @@
 <template>
-  <a :href="link" :class="['btn', type, size]">{{ label }}</a>
+  <a
+    :href="!disabled ? link : null"
+    :class="['btn', type, size, { disabled: disabled }]"
+    >{{ label }}</a
+  >
 </template>
 
 <script>
@@ -22,6 +26,10 @@ export default {
       type: String,
       default: "md",
     },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
   },
 };
 </script>
@@ -31,8 +39,7 @@ export default {
 .btn {
   font-family: "Lato";
   transition: 0.3s all ease-out;
-	display: block;
-	
+  display: block;
 
   &.primary {
     background-color: #fff;
@@ -66,7 +73,7 @@ export default {
   }
 
   &.accent {
-      background-color: #FFE3BD;
+    background-color: #ffe3bd;
     color: var(--brand);
 
     &:hover {
@@ -94,6 +101,25 @@ export default {
     line-height: 24px;
     border-radius: 56px;
     padding: 16px 40px;
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #fff;
+    color: var(--brand);
+
+    &:hover {
+      background-color: #fff;
+      color: var(--brand);
+      box-shadow: none;
+    }
+
+    &:active {
+      background-color: #fff;
+      color: var(--brand);
+      box-shadow: none;
+    }
   }
 }
 </style>

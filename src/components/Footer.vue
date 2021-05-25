@@ -24,7 +24,6 @@
   </div>
 </template>
 
-
 <script>
 import BaseButton from "@/components/Button.vue";
 
@@ -41,7 +40,7 @@ export default {
         "Kuma Inu is hiring developers. We are always happy to expand the team!",
       btn: {
         label: "Contact Us",
-        link: "#",
+        link: "mailto:contact@kumatoken.com",
       },
     };
   },

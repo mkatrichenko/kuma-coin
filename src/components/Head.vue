@@ -7,7 +7,7 @@
       <p class="head__text">
         Kuma Inu ($KUMA) is a community-focused, decentralized cryptocurrency
         for different projects related to The Kuma Inu token. The Next project
-        is here in your hands. <a href="#ololo" class="link">Hold.</a>
+        is here in your hands. <a href="/" class="link">Hold.</a>
       </p>
       <div class="main__img">
         <img src="@/assets/img/head/main.png" alt="" />

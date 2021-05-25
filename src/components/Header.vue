@@ -17,12 +17,14 @@
           size="sm"
         />
       </div>
-      <div class="burger" @click.stop="toggleMenu"  v-if="!isMenuOpened">
+      <div class="burger" @click.stop="toggleMenu" v-if="!isMenuOpened">
         <img src="@/assets/img/hamburger.svg" alt="" />
-        
       </div>
-      <div :class="['mobile__nav', { active: isMenuOpened }]" v-click-outside="onClickOutside">
-        <div class="cross" @click.stop="toggleMenu" >
+      <div
+        :class="['mobile__nav', { active: isMenuOpened }]"
+        v-click-outside="onClickOutside"
+      >
+        <div class="cross" @click.stop="toggleMenu">
           <img src="@/assets/img/cancel.svg" alt="" />
         </div>
         <ul class="burger__list">
@@ -91,8 +93,8 @@ export default {
     },
 
     onClickOutside() {
-      if(this.isMenuOpened){
-        this.isMenuOpened = false
+      if (this.isMenuOpened) {
+        this.isMenuOpened = false;
       }
     },
   },
@@ -118,6 +120,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
+  padding-top: 8px;
 }
 
 .logo__container {
@@ -134,7 +137,6 @@ export default {
 .nav {
   display: flex;
   align-items: center;
-  padding-top: 8px;
 
   @media screen and (max-width: 767px) {
     display: none;

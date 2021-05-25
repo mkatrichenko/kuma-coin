@@ -125,7 +125,6 @@ export default {
 <style scoped lang="scss">
 .buy {
   margin-top: 100px;
-  padding-top: 80px;
   padding-bottom: 100px;
 
   @media screen and (max-width: 767px) {

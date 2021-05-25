@@ -2,15 +2,11 @@
   <div class="footer__container">
     <div class="container">
       <div class="left">
-        <div class="footer__title">
-          <h3>{{ title }}</h3>
-        </div>
+        <h3 class="footer__title">{{ title }}</h3>
         <div class="footer__inner">
           <h4>{{ inner }}</h4>
         </div>
-        <div class="footer__text">
-          <h5>{{ text }}</h5>
-        </div>
+        <p class="footer__text">{{ text }}</p>
       </div>
       <div class="footer__vector">
         <img src="../assets/img/vector-footer.png" alt="" />
@@ -52,15 +48,21 @@ export default {
   max-width: 1376px;
   background: #f6a32f;
   border-radius: 16px;
-  margin: 0 auto;
+  margin: 0 auto 32px;
 }
 
 .container {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1000px;
+  align-items: start;
+  justify-content: center;
+  max-width: 854px;
   margin: 0 auto;
+  padding: 72px 0 83px;
+
+  @media screen and (max-width: 767px) {
+	align-items: center;
+	padding: 16px;
+  }
 }
 .footer__title {
   font-family: "Patrick";
@@ -70,6 +72,7 @@ export default {
   line-height: 65px;
   text-align: center;
   color: #ffffff;
+  margin: 0 0 10px;
 }
 .footer__inner {
   margin-top: -20px;
@@ -83,19 +86,23 @@ export default {
 .footer__text {
   padding-top: 28px;
   font-family: "Quicksand";
-  font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 24px;
+font-size: 14px;
+line-height: 24px;
   color: #ffffff;
+  margin: 0;
+  max-width: 346px;
+  text-align: center;
 }
 .footer__btn {
+	margin-top: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .footer__vector {
-  padding-top: 125px;
+  padding-top: 60px;
+  margin-right: 50px;
 }
 
 

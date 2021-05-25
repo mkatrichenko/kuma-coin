@@ -2,7 +2,7 @@
   <div class="head">
     <div class="container">
       <h1 class="head__title">
-        We present you The <br /><span class="orange">New Icon</span>
+        We present you The <br /><span class="orange">New Icon <div class="bg"></div></span>
       </h1>
       <p class="head__text">
         Kuma Inu ($KUMA) is a community-focused, decentralized cryptocurrency
@@ -42,6 +42,20 @@ export default {
   position: relative;
   padding-bottom: 140px;
   padding-top: 180px;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 100px;
+    padding-bottom: 32px;
+  }
+}
+
+.container {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 12px;
+  }
 }
 
 .head__title {
@@ -62,17 +76,18 @@ export default {
     margin-left: 16px;
     font-size: 48px;
     line-height: 1;
+    margin-top: 24px;
+    display: flex;
 
-    &::after {
-      content: "";
+    .bg {
       position: absolute;
       background-color: var(--brand);
       top: -8px;
       bottom: -8px;
       left: -16px;
-      right: -16px;
       z-index: -1;
       border-radius: 16px;
+      width: 186px;
     }
   }
 }
@@ -89,19 +104,25 @@ export default {
   text-align: left;
 
   .link {
-      text-decoration: underline;
-      color: #fefefe;
+    text-decoration: underline;
+    color: #fefefe;
   }
 }
 
 .main__img {
   position: absolute;
   max-width: 730px;
-  width: 51%;
+  width: 47%;
   left: 55%;
   transform: translateX(-50%);
   bottom: -20%;
   z-index: 5;
+
+  @media screen and (max-width: 767px) {
+    position: static;
+    transform: none;
+    width: 350px;
+  }
 
   img {
     width: 100%;
@@ -109,67 +130,77 @@ export default {
 }
 
 .coin {
-    position: absolute;
-    transform: translateX(-50%);
+  position: absolute;
+  transform: translateX(-50%);
 
-    img {
-        width: 100%;
-    }
+  img {
+    width: 100%;
+  }
 
-    &.coin_1 {
-        width: 206px;
-        left: 73%;
-        z-index: 4;
-        bottom: 16px;
-    }
+  &.coin_1 {
+    width: 206px;
+    left: 73%;
+    z-index: 4;
+    bottom: 16px;
 
-    &.coin_2 {
-        width: 136px;
-        left: 65%;
-        z-index: 4;
-        bottom: 50%;
+    @media screen and (max-width: 767px) {
+      display: none;
     }
+  }
+
+  &.coin_2 {
+    width: 136px;
+    left: 65%;
+    z-index: 4;
+    bottom: 50%;
+
+    @media screen and (max-width: 767px) {
+      left: -50px;
+      width: 50px;
+    }
+  }
 }
 
 .add {
-    position: absolute;
-    right: 45px;
-    top: 44%;
-    width: 205px;
-    transform: rotateZ(8deg);
-	img {
-        width: 100%;
-    }
+  position: absolute;
+  right: 45px;
+  top: 44%;
+  width: 205px;
+  transform: rotateZ(8deg);
+
+  @media screen and (max-width: 767px) {
+    position: static;
+    transform: none;
+    width: 200px;
+  }
+
+  img {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1200px) {
-  
-.head__title {
-	max-width: 100%;
-}
+  .head__title {
+    max-width: 100%;
+  }
 }
 
 /* 768px - 992px */
 @media screen and (max-width: 992px) {
-
 }
 
 /* 576px - 768px */
 @media screen and (max-width: 768px) {
-	
 }
 
 /* 0 - 576px */
 @media screen and (max-width: 576px) {
-	.head__title {
-		width: 100%;
-		max-width: none;
-}
-.head__text {
-		max-width: none;
-}
-	.main__img {
-		position: static;
-	}
+  .head__title {
+    width: 100%;
+    max-width: none;
+  }
+  .head__text {
+    max-width: none;
+  }
 }
 </style>

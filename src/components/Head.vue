@@ -136,28 +136,39 @@ export default {
     right: 50px;
     top: 50%;
     width: 195px;
-
-     img {
+	img {
         width: 100%;
     }
 }
 
 @media screen and (max-width: 1200px) {
   
+.head__title {
+	max-width: 100%;
+}
 }
 
 /* 768px - 992px */
 @media screen and (max-width: 992px) {
-  
+
 }
 
 /* 576px - 768px */
 @media screen and (max-width: 768px) {
-  
+	
 }
 
 /* 0 - 576px */
 @media screen and (max-width: 576px) {
-
+	.head__title {
+		width: 100%;
+		max-width: none;
+}
+.head__text {
+		max-width: none;
+}
+	.main__img {
+		position: static;
+	}
 }
 </style>

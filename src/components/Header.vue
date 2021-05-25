@@ -171,4 +171,31 @@ export default {
       cursor: pointer;
     }
 }
+
+@media screen and (max-width: 1200px) {
+  .header__container {
+		width: 960px;
+	}
+}
+
+/* 768px - 992px */
+@media screen and (max-width: 992px) {
+  .header__container {
+		width: 720px;
+	}
+}
+
+/* 576px - 768px */
+@media screen and (max-width: 768px) {
+	.header__container {
+		width: 560px;
+	}
+}
+
+/* 0 - 576px */
+@media screen and (max-width: 576px) {
+	.header__container {
+		width: 90%;
+	}
+}
 </style>

@@ -17,10 +17,14 @@
           size="sm"
         />
       </div>
-      <div class="burger" @click="openMenu">
+      <div class="burger" @click.stop="toggleMenu"  v-if="!isMenuOpened">
         <img src="@/assets/img/hamburger.svg" alt="" />
+        
       </div>
-      <div :class="['mobile__nav', {active: isMenuOpened}]">
+      <div :class="['mobile__nav', { active: isMenuOpened }]" v-click-outside="onClickOutside">
+        <div class="cross" @click.stop="toggleMenu" >
+          <img src="@/assets/img/cancel.svg" alt="" />
+        </div>
         <ul class="burger__list">
           <li v-for="(item, index) in NAV_LIST" :key="index" class="nav__item">
             <a :href="item.link" class="nav_link">{{ item.label }}</a>
@@ -34,18 +38,13 @@
           size="sm"
         />
       </div>
-      <!-- <Slide right class="burger_menu">
-        <div class="burger">
-          
-        </div>
-      </Slide> -->
     </div>
   </header>
 </template>
 
 <script>
 import BaseButton from "@/components/Button.vue";
-// import { Slide } from "vue-burger-menu";
+import vClickOutside from "v-click-outside";
 
 const NAV_LIST = [
   {
@@ -69,13 +68,15 @@ export default {
   name: "Header",
   components: {
     BaseButton,
-    // Slide,
+  },
+  directives: {
+    clickOutside: vClickOutside.directive,
   },
   data() {
     return {
       NAV_LIST: NAV_LIST,
       scrollPosition: 0,
-      isMenuOpened: false
+      isMenuOpened: false,
     };
   },
   mounted() {
@@ -85,9 +86,15 @@ export default {
     updateScroll() {
       this.scrollPosition = window.scrollY;
     },
-    openMenu() {
-      this.isMenuOpened = !this.isMenuOpened
-    }
+    toggleMenu() {
+      this.isMenuOpened = !this.isMenuOpened;
+    },
+
+    onClickOutside() {
+      if(this.isMenuOpened){
+        this.isMenuOpened = false
+      }
+    },
   },
 };
 </script>
@@ -126,6 +133,7 @@ export default {
 .nav {
   display: flex;
   align-items: center;
+  padding-top: 8px;
 
   @media screen and (max-width: 767px) {
     display: none;
@@ -150,6 +158,10 @@ export default {
 
 .buy_btn {
   margin-left: 20px;
+
+  @media screen and (max-width: 767px) {
+    margin: 0;
+  }
 }
 
 .burger_menu {
@@ -175,6 +187,7 @@ export default {
   top: 16px;
   cursor: pointer;
   display: none;
+  z-index: 12;
 
   @media screen and (max-width: 767px) {
     display: block;
@@ -190,8 +203,13 @@ export default {
   position: absolute;
   right: 0;
   top: 0;
+  bottom: 0;
+  background-color: var(--brand);
   transform: translateX(100%);
   transition: 0.3s all ease-out;
+  height: 100vh;
+  width: 200px;
+  padding: 0 12px;
 
   &.active {
     transform: none;
@@ -199,6 +217,20 @@ export default {
 
   @media screen and (max-width: 767px) {
     display: block;
+  }
+}
+
+.cross {
+  position: absolute;
+  width: 18px;
+  height: 16px;
+  right: 20px;
+  top: 16px;
+  cursor: pointer;
+  z-index: 12;
+
+  img {
+    width: 100%;
   }
 }
 </style>

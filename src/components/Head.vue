@@ -133,9 +133,10 @@ export default {
 
 .add {
     position: absolute;
-    right: 50px;
-    top: 50%;
-    width: 195px;
+    right: 45px;
+    top: 44%;
+    width: 205px;
+    transform: rotateZ(8deg);
 	img {
         width: 100%;
     }

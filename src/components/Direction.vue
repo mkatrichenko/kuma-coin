@@ -32,7 +32,7 @@ export default {
 
 <style lang="scss" scoped>
 .direction {
-	padding-top: 200px;
+  padding-top: 200px;
   padding-bottom: 110px;
 }
 .direction__container {
@@ -96,80 +96,81 @@ export default {
   top: 210px;
   right: -140px;
   z-index: 2;
-   width: 294px;
+  width: 294px;
 
-   img {
-     width: 100%;
-   }
+  img {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1200px) {
   .img__direction {
-		display: flex;
-		justify-content: space-around;
-		position: relative;
-		top: 0;
-		right: 0;
-	}
-	.text__direction {
-		padding: 0 15px;
-	}
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+  .text__direction {
+    padding: 0 15px;
+  }
 }
 
 /* 768px - 992px */
 @media screen and (max-width: 992px) {
   .img__direction {
-		display: flex;
-		justify-content: space-around;
-		position: relative;
-		top: 0;
-		right: 0;
-	}
-	.text__direction {
-		padding: 0 15px;
-	}
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+  .text__direction {
+    padding: 0 15px;
+  }
 }
 
 /* 576px - 768px */
 @media screen and (max-width: 768px) {
   .img__direction {
-		display: flex;
-		justify-content: space-around;
-		position: relative;
-		top: 0;
-		right: 0;
-	}
-	.text__direction {
-		padding: 0 15px;
-	}
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+  .text__direction {
+    padding: 0 15px;
+  }
 }
 
 /* 0 - 576px */
 @media screen and (max-width: 576px) {
-	.direction{
-		padding: 0 10px;
-		padding-bottom: 30px;
-	}
-	.img__direction {
-		display: flex;
-		justify-content: space-around;
-		position: relative;
-		top: 0;
+  .direction {
+    padding: 0 10px;
+    padding-bottom: 30px;
+    margin: 32px 0;
+  }
+  .img__direction {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 0;
     right: 0;
     width: 120px;
+    margin-top: 16px;
 
     img {
       width: 100%;
     }
-	}
-	.text__direction {
-		padding: 0 15px;
-	}
-	.title__direction {
-		h2 {
-			font-size: 32px;
-		}
-	
-	}
+  }
+  .text__direction {
+    padding: 0 15px;
+  }
+  .title__direction {
+    h2 {
+      font-size: 32px;
+    }
+  }
 }
 </style>

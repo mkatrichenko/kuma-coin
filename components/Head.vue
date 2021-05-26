@@ -9,15 +9,21 @@
         for different projects related to The Kuma Inu token. The Next project
         is here in your hands. <a href="/" class="link">Hold.</a>
       </p>
-      <div class="main__img">
-        <img src="@/assets/img/head/main.png" alt="" />
-      </div>
-      <div class="coin coin_1">
-        <img src="@/assets/img/head/coin_1.png" alt="" />
-      </div>
-      <div class="coin coin_2">
-        <img src="@/assets/img/head/coin_2.png" alt="" />
-      </div>
+      <transition name="fade">
+        <div class="main__img" v-if="isLoaded">
+          <img src="@/assets/img/head/main.png" alt="" />
+        </div>
+      </transition>
+      <transition name="coin_1_animation">
+        <div class="coin coin_1" v-if="isLoaded"> 
+          <img src="@/assets/img/head/coin_1.png" alt="" />
+        </div>
+      </transition>
+      <transition name="coin_2_animation">
+        <div class="coin coin_2" v-if="isLoaded">
+          <img src="@/assets/img/head/coin_2.png" alt="" />
+        </div>
+      </transition>
       <div class="add">
         <img src="@/assets/img/head/text.png" alt="" />
       </div>
@@ -28,6 +34,16 @@
 <script>
 export default {
   name: "Head",
+  data() {
+    return {
+      isLoaded: false
+    };
+  },
+  created() {
+    setTimeout(() => {
+      this.isLoaded = true;
+    }, 2500);
+  }
 };
 </script>
 
@@ -183,5 +199,32 @@ export default {
   .head__text {
     max-width: none;
   }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateX(-50%) translateY(20px);
+}
+
+.coin_1_animation-enter-active,
+.coin_1_animation-leave-active {
+  transition: all 0.5s;
+}
+.coin_1_animation-enter, .coin_1_animation-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateX(10%);
+}
+
+.coin_2_animation-enter-active,
+.coin_2_animation-leave-active {
+  transition: all 0.5s;
+}
+.coin_2_animation-enter, .coin_1_animation-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+ transform: translateX(-50%) translateY(-20px);
 }
 </style>

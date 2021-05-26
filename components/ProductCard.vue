@@ -27,7 +27,7 @@ export default {
   props: {
     title: String,
     text: String,
-    btn: String,
+    btn: Object,
   },
 };
 </script>

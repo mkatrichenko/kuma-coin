@@ -53,7 +53,7 @@ export default {
 
 .container {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
   max-width: 854px;
   margin: 0 auto;

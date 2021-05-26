@@ -158,6 +158,9 @@ export default {
   margin: 0 17px;
   text-decoration: none;
 }
+.nav__item {
+	margin: 20px 0;
+}
 
 .buy_btn {
   margin-left: 20px;

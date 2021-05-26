@@ -127,7 +127,7 @@ export default {
 .main__img {
   position: absolute;
   max-width: 730px;
-  width: 40%;
+  width: 38%;
   left: 55%;
   transform: translateX(-50%);
   bottom: -90px;

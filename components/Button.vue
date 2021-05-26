@@ -40,6 +40,7 @@ export default {
   font-family: "Lato";
   transition: 0.3s all ease-out;
   display: block;
+  white-space: nowrap;
 
   &.primary {
     background-color: #fff;

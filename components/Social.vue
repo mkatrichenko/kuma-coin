@@ -64,6 +64,12 @@ export default {
   .smm__item {
     width: 48px;
     margin: 0 8px;
+    transition: 0.2 all ease-out;
+
+    &:hover {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
 
     @media screen and (max-width: 767px) {
       width: 32px;

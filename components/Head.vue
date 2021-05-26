@@ -1,21 +1,28 @@
 <template>
   <div class="head">
+    <transition name="bg">
+      <div class="bg" v-if="isLoaded"></div>
+    </transition>
     <div class="container">
-      <h1 class="head__title">
-        Kuma Dex
-      </h1>
-      <p class="head__text">
-        Kuma Inu ($KUMA) is a community-focused, decentralized cryptocurrency
-        for different projects related to The Kuma Inu token. The Next project
-        is here in your hands. <a href="/" class="link">Hold.</a>
-      </p>
+      <transition name="text">
+        <h1 class="head__title" v-if="isLoaded">
+          Kuma Dex
+        </h1>
+      </transition>
+      <transition name="text">
+        <p class="head__text" v-if="isLoaded">
+          Kuma Inu ($KUMA) is a community-focused, decentralized cryptocurrency
+          for different projects related to The Kuma Inu token. The Next project
+          is here in your hands. <a href="/" class="link">Hold.</a>
+        </p>
+      </transition>
       <transition name="fade">
         <div class="main__img" v-if="isLoaded">
           <img src="@/assets/img/head/main.png" alt="" />
         </div>
       </transition>
       <transition name="coin_1_animation">
-        <div class="coin coin_1" v-if="isLoaded"> 
+        <div class="coin coin_1" v-if="isLoaded">
           <img src="@/assets/img/head/coin_1.png" alt="" />
         </div>
       </transition>
@@ -42,7 +49,7 @@ export default {
   created() {
     setTimeout(() => {
       this.isLoaded = true;
-    }, 2500);
+    }, 500);
   }
 };
 </script>
@@ -51,13 +58,24 @@ export default {
 <style scoped lang="scss">
 .head {
   width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("../assets/img/head/bg.png");
+
   position: relative;
   padding-bottom: 140px;
   padding-top: 180px;
+
+  .bg {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../assets/img/head/bg.png");
+  }
 
   @media screen and (max-width: 767px) {
     padding-top: 100px;
@@ -225,6 +243,23 @@ export default {
 }
 .coin_2_animation-enter, .coin_1_animation-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
- transform: translateX(-50%) translateY(-20px);
+  transform: translateX(-50%) translateY(-20px);
+}
+
+.bg-enter-active,
+.bg-leave-active {
+  transition: all 0.5s;
+}
+.bg-enter, .bg-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.text-enter-active,
+.text-leave-active {
+  transition: all 0.5s;
+}
+.text-enter, .text-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  transform: translateY(15px);
 }
 </style>

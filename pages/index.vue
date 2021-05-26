@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-    <transition name="slide">
-        <Loader v-if="!isLoading"/>
-      </transition>
     <Header/>
     <Head/>
     <Advantages/>
@@ -25,7 +22,6 @@ import Head from '@/components/Head.vue'
 import Advantages from '@/components/Advantages.vue'
 import Buy from '@/components/Buy.vue'
 import Social from '@/components/Social.vue'
-import Loader from '@/components/Loader.vue'
 
 export default {
   name: 'App',
@@ -38,19 +34,8 @@ export default {
     Head,
     Advantages,
     Buy,
-    Social,
-    Loader
+    Social
   },
-  data() {
-    return {
-      isLoading: false
-    }
-  },
-  created() {
-    setTimeout(() => {
-      this.isLoading = true;
-    }, 2000);
-  }
 }
 </script>
 
@@ -70,13 +55,5 @@ export default {
 body {
   overflow-x: hidden;
   width: 100vw;
-}
-
-.slide-enter-active,
-.slide-leave-active {
-  transition: all 0.5s;
-}
-.slide-enter, .slide-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  transform: translateY(-200%);
 }
 </style>

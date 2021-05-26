@@ -83,7 +83,7 @@ export default {
   border-radius: 16px;
   position: relative;
   margin: 0 23px;
-  padding-top: 75px;
+	padding: 75px 15px 10px 15px;
   width: calc(33% - 23px);
 
   @media screen and (max-width: 767px) {

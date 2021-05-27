@@ -157,13 +157,13 @@ export default {
   color: #fff;
   margin: 0 17px;
   text-decoration: none;
+}
+.nav__item {
+	margin: 20px 0;
 	&:hover {
       opacity: 0.8;
       transform: scale(1.05);
     }
-}
-.nav__item {
-	margin: 20px 0;
 }
 
 .buy_btn {

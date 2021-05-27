@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'KUMA',
+    title: 'Kuma Inu | Community-Driven Project',
     htmlAttrs: {
       lang: 'en'
     },

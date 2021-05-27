@@ -147,9 +147,6 @@ export default {
   display: flex;
   list-style: none;
 }
-.nav a {
-	font-size: 16px;
-}
 
 .nav_link {
   font-family: "Lato";
@@ -167,6 +164,7 @@ export default {
 
 .buy_btn {
   margin-left: 20px;
+	font-size: 16px;
 
   @media screen and (max-width: 767px) {
     margin: 0;

@@ -146,6 +146,10 @@ export default {
 .nav__container {
   display: flex;
   list-style: none;
+	&:hover {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
 }
 
 .nav_link {

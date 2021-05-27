@@ -132,7 +132,7 @@ export default {
   transform: translateX(-50%);
   bottom: -90px;
   z-index: 5;
-	@media screen and (max-width: 1200px) {
+	@media screen and (max-width: 1919px) {
 		width: 38%;
 	}
   @media screen and (max-width: 767px) {

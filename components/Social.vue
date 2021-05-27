@@ -42,6 +42,10 @@ const SMM_LIST = [
     img: "/smm/twitter.png",
     link: "https://twitter.com/KumaInuOfficial"
   },
+	{
+		img: "/smm/telegra.png",
+    link: "https://t.me/KumaInuOfficial"
+	},
 ];
 export default {
   name: "SMM",

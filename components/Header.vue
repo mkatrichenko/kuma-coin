@@ -147,6 +147,9 @@ export default {
   display: flex;
   list-style: none;
 }
+.nav__container a {
+	font-size: 16px;
+}
 
 .nav_link {
   font-family: "Lato";

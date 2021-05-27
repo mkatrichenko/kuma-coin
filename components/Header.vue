@@ -164,7 +164,6 @@ export default {
 
 .buy_btn {
   margin-left: 20px;
-	font-size: 16px;
 
   @media screen and (max-width: 767px) {
     margin: 0;

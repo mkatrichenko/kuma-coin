@@ -90,7 +90,7 @@ export default {
 
   &.sm {
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 17px;
     border-radius: 16px;
     padding: 8px 16px;

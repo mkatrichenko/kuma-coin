@@ -127,13 +127,13 @@ export default {
 .main__img {
   position: absolute;
   max-width: 730px;
-  width: 38%;
+  width: 33%;
   left: 55%;
   transform: translateX(-50%);
   bottom: -90px;
   z-index: 5;
 	@media screen and (max-width: 12000px) {
-		width: 33%;
+		width: 38%;
 	}
   @media screen and (max-width: 767px) {
     position: static;

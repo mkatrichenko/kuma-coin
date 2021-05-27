@@ -147,7 +147,7 @@ export default {
   display: flex;
   list-style: none;
 }
-.nav__container a {
+.nav a {
 	font-size: 16px;
 }
 

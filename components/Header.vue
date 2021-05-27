@@ -146,10 +146,6 @@ export default {
 .nav__container {
   display: flex;
   list-style: none;
-	&:hover {
-      opacity: 0.8;
-      transform: scale(1.05);
-    }
 }
 
 .nav_link {
@@ -161,6 +157,10 @@ export default {
   color: #fff;
   margin: 0 17px;
   text-decoration: none;
+	&:hover {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
 }
 .nav__item {
 	margin: 20px 0;

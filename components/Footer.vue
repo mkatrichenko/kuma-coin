@@ -115,6 +115,7 @@ line-height: 24px;
   }
 	.container {
 		flex-direction: column;
+		align-items: center;
 	}
 	.footer__vector {
 		display: none;

@@ -152,7 +152,7 @@ export default {
   font-family: "Lato";
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 17px;
   color: #fff;
   margin: 0 17px;

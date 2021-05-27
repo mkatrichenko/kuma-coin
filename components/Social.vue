@@ -40,7 +40,7 @@ const SMM_LIST = [
   },
   {
     img: "/smm/twitter.png",
-    link: "https://www.coingecko.com/en/coins/kuma-inu"
+    link: "https://twitter.com/KumaInuOfficial"
   },
 ];
 export default {

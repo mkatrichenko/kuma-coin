@@ -119,7 +119,7 @@
 }
 .paw {
   position: absolute;
-  top: 170px;
+  top: 155px;
   right: -100px;
   width: 1250px;
 
